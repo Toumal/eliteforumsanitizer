@@ -1,0 +1,29 @@
+{  
+  "manifest_version": 2,
+
+  "name": "Frontier Forum Sanitizer",
+  "description": "Removes all discussions about Steam keys, Griefing, or even Offline Mode if you so desire.",
+  "version": "1.0",
+
+  "permissions": [
+    "https://forums.frontier.co.uk/*",
+    "storage"
+  ],
+
+  "content_scripts": [
+    {
+      "matches":["https://forums.frontier.co.uk/*"],
+      "js":["js/input.js"]
+    }
+  ],
+
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": false
+  },
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}
