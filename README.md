@@ -2,6 +2,7 @@ Elite Forum Sanitizer
 =====================
 
 A chrome browser extension for removing redundant posts from the Frontier Forums, specifically the Elite Dangerous Forums.
+Based on the Antiduino plugin from https://github.com/SickSad/HaD-AntiDuino
 
 Installation
 ------------
@@ -19,5 +20,6 @@ Usage
 -----
 A new extension icon should appear on the top bar of chrome (the frontier globe), clicking it will allow you to enable a number of extension options. Once you have enabled an option you will need to reload the page for them to take effect.
 
-(Note - Only works on forums.frontier.co.uk)
+![Screenshot](forumsanitizer.png)
 
+(Note - Only works on forums.frontier.co.uk)
