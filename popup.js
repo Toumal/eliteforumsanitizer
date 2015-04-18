@@ -92,5 +92,41 @@ window.onload = function(){
     word_box.onchange = function(){
         storage.set({'filterwords': word_box.value});
     } 
+
+	
+	storage.get('filterusers', function(result){
+        var filterusers = result['filterusers'];
+        if (filterusers === undefined){
+            filterusers = false;
+            storage.set({'filterusers': filterusers});
+            storage.set({'filterusers_names': ''});
+        }
+        var uf = document.getElementById('filterusers');
+        uf.checked = filterusers;
+    });
+    var filter_users = document.getElementById('filterusers');
+    filter_users.onclick=function(){
+        if (filter_users.checked){
+            storage.set({'filterusers': true});
+        }else{
+            storage.set({'filterusers': false});
+        }
+    }
+
+	storage.get('filterusers_names', function(result){
+        var users = result['filterusers_names'];
+		if (users === undefined) {
+			users = '';
+		}
+        var users_box = document.getElementById('users');
+        users_box.value = users;
+    });
+
+
+    var users_box = document.getElementById('users');
+    users_box.onchange = function(){
+        storage.set({'filterusers_names': users_box.value});
+    } 
+
 	
 }
