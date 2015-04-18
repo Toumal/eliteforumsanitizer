@@ -68,7 +68,7 @@ chrome.storage.local.get(['nogriefing', 'nosteam', 'nooffline', 'filtercustom', 
 
     if (results['nosteam']){
         console.log('removing Steam posts.');
-        removeByMention(['steam key', 'steam keys', 'Elite Dangerous now on Steam', 'launch on steam', 'already on steam', 'steam is really important']);
+        removeByMention(['steam key', 'steam keys', 'Elite Dangerous now on Steam', 'launch on steam', 'already on steam', 'sale on steam', 'steam is really important']);
     }
 
     if (results['nooffline']){
