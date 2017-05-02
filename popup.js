@@ -19,27 +19,6 @@ window.onload = function(){
         }
     }
 
-
-
-    storage.get('nosteam', function(result){
-        var nosteam = result['nosteam'];
-        if (nosteam === undefined){
-            nosteam = false;
-            storage.set({'nosteam': nosteam});
-        }
-        var cb = document.getElementById('nosteam');
-        cb.checked = nosteam;
-    });
-    var hne_cb = document.getElementById('nosteam');
-    hne_cb.onclick=function(){
-        if (hne_cb.checked){
-            storage.set({'nosteam': true});
-        }else{
-            storage.set({'nosteam': false});
-        }
-    }
-
-
     storage.get('nooffline', function(result){
         var nooffline = result['nooffline'];
         if (nooffline === undefined){
