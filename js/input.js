@@ -86,16 +86,11 @@ function removeByUser(filterusers) {
 
 
 
-chrome.storage.local.get(['nogriefing', 'nosteam', 'nooffline', 'filtercustom', 'filterwords', 'filterusers', 'filterusers_names'], function(results){
+chrome.storage.local.get(['nogriefing', 'nooffline', 'filtercustom', 'filterwords', 'filterusers', 'filterusers_names'], function(results){
     console.log("Frontier Forum Sanitizer loaded.");
     if (results['nogriefing']){
         console.log('removing Griefing posts.');
         removeByMention(['griefing', 'griefer']);
-    }
-
-    if (results['nosteam']){
-        console.log('removing Steam posts.');
-        removeByMention(['steam key', 'steam keys', 'Elite Dangerous now on Steam', 'launch on steam', 'already on steam', 'sale on steam', 'steam is really important']);
     }
 
     if (results['nooffline']){
